@@ -146,9 +146,28 @@ console.log(processLearnersLoop(learners));
     // checkInts(2, 6) // should return ["even", "even"]
     // ❗ Notes:
     // 🧠 Solve this problem using rest parameters and map.
-    const checkInts = () => {
 
-    }
+    const checkInts = (...args) => {
+  if (args.length === 0) {
+    return "pass some arguments, yo!";
+  }
+
+  return args.map((num) => (num % 2 === 0 ? "even" : "odd"));
+};
+
+// Examples of usage:
+console.log(checkInts(0, 1, 2, 3, 4, 5));
+// should return ["even", "odd","even", "odd","even", "odd"]
+
+console.log(checkInts(2, 5, 1, 4, 0));
+// should return ["even", "odd", "odd", "even", "even"]
+
+console.log(checkInts(2, 6));
+// should return ["even", "even"]
+
+console.log(checkInts());
+// should return "pass some arguments, yo!"
+
 
     // 🧪 TESTS, do not work below this line
     // 🧪 TESTS, do not work below this line
