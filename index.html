@@ -64,9 +64,9 @@ console.log(processSingleLearner({ name: "Pete", age: 23, lovesJS: 0 })); // sho
   }
   return learners;
 };
-    
+
 // Example of usage:
-let learners = [
+const learners = [
   { name: "Elisabeth", lovesJS: 1 },
   { name: "Pete", age: 23, lovesJS: 0 }
 ];
@@ -115,38 +115,10 @@ console.log(processLearnersLoop(learners));
     // 🧠 It should work exactly the same as the getJavaScriptLoversForEach function above.
     // ❗ Notes:
     // 🧠 Solve this challenge using the filter method of the learners array.
+    const getJavaScriptLoversFilter = () => {
 
-    const getJavaScriptLoversFilter = (learners) => {
-  const jsLovers = learners.filter((learner) => {
-    const lovesJS = learner.lovesJS === 1 || learner.lovesJS === true;
-    return lovesJS;
-  });
+    }
 
-  if (jsLovers.length > 0) {
-    return jsLovers;
-  } else {
-    return "no JS lovers here!";
-  }
-};
-
-// Example of usage:
-let learners = [
-  { name: "Elisabeth", lovesJS: 1 },
-  { name: "Pete", age: 23, lovesJS: 0 },
-  { name: "John", lovesJS: true },
-  { name: "Alice", lovesJS: false }
-];
-
-console.log(getJavaScriptLoversFilter(learners));
-// should return [
-//   { name: "Elisabeth", lovesJS: 1 },
-//   { name: "John", lovesJS: true }
-// ]
-
-console.log(getJavaScriptLoversFilter([{ name: "Bob", lovesJS: false }]));
-// should return "no JS lovers here!"
-    
-    
     // 👉 CHALLENGE 7
     // 🧠 The function sumOddInts takes an array of integers as its argument and returns an array with two elements.
     // 🧠 The first element is a number which is the sum of the odd integers in the original array.
@@ -198,7 +170,6 @@ console.log(sumOddInts([]));
     // checkInts(2, 6) // should return ["even", "even"]
     // ❗ Notes:
     // 🧠 Solve this problem using rest parameters and map.
-    
  const checkInts = (...args) => {
   if (args.length === 0) {
     return "pass some arguments, yo!";
