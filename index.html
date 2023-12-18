@@ -35,7 +35,7 @@
     learner.lovesJS = true;
   }
   return learner;
-}; 
+};
 
 // Examples of usage:
 console.log(processSingleLearner({ name: "Elisabeth", lovesJS: 1 })); // should return { name: "Elisabeth", lovesJS: true }
@@ -55,7 +55,7 @@ console.log(processSingleLearner({ name: "Pete", age: 23, lovesJS: 0 })); // sho
     
     const processLearnersLoop = (learners) => {
   for (let i = 0; i < learners.length; i++) {
-    const learner = learners[i]; 
+    const learner = learners[i];
     if (learner.lovesJS === 0) {
       learner.lovesJS = false;
     } else if (learner.lovesJS === 1) {
@@ -84,30 +84,9 @@ console.log(processLearnersLoop(learners));
     // ❗ Notes:
     // 🧠 Solve this challenge using the forEach method of the learners array.
     // 🧠 Use arrow functions whenever possible.
-   
-    const processLearnerForEach = (learners) => {
-  learners.forEach((learner) => {
-    if (learner.lovesJS === 0) {
-      learner.lovesJS = false;
-    } else if (learner.lovesJS === 1) {
-      learner.lovesJS = true;
+    const processLearnerForEach = () => {
+
     }
-  });
-
-  return learners;
-};
-
-// Example of usage:
-const learners = [
-  { name: "Elisabeth", lovesJS: 1 },
-  { name: "Pete", age: 23, lovesJS: 0 }
-];
-
-console.log(processLearnerForEach(learners));
-// should return [
-//   { name: "Elisabeth", lovesJS: true },
-//   { name: "Pete", age: 23, lovesJS: false }
-// ]
 
     // 👉 CHALLENGE 4
     // 🧠 The function processLearnerMap takes an array of learner objects as its argument, and returns a new array.
