@@ -52,30 +52,9 @@ console.log(processSingleLearner({ name: "Pete", age: 23, lovesJS: 0 })); // sho
     // ❗ Notes:
     // 🧠 There are many approaches to this problem: using a loop, using forEach, using map...
     // 🧠 Solve this challenge using a for/in loop or a for loop.
-    
-    const processLearnersLoop = (learners) => {
-  for (let i = 0; i < learners.length; i++) {
-    const learner = learners[i];
-    if (learner.lovesJS === 0) {
-      learner.lovesJS = false;
-    } else if (learner.lovesJS === 1) {
-      learner.lovesJS = true;
+    const processLearnersLoop = () => {
+
     }
-  }
-  return learners;
-};
-
-// Example of usage:
-const learners = [
-  { name: "Elisabeth", lovesJS: 1 },
-  { name: "Pete", age: 23, lovesJS: 0 }
-];
-
-console.log(processLearnersLoop(learners));
-// should return [
-//   { name: "Elisabeth", lovesJS: true },
-//   { name: "Pete", age: 23, lovesJS: false }
-// ]
 
     // 👉 CHALLENGE 3
     // 🧠 The function processLearnerForEach takes an array of learner objects as its argument, and returns it after some modifications.
@@ -83,30 +62,9 @@ console.log(processLearnersLoop(learners));
     // ❗ Notes:
     // 🧠 Solve this challenge using the forEach method of the learners array.
     // 🧠 Use arrow functions whenever possible.
+    const processLearnerForEach = () => {
 
-    const processLearnerForEach = (learners) => {
-  learners.forEach((learner) => {
-    if (learner.lovesJS === 0) {
-      learner.lovesJS = false;
-    } else if (learner.lovesJS === 1) {
-      learner.lovesJS = true;
     }
-  });
-
-  return learners;
-};
-
-// Example of usage:
-const learners = [
-  { name: "Elisabeth", lovesJS: 1 },
-  { name: "Pete", age: 23, lovesJS: 0 }
-];
-
-console.log(processLearnerForEach(learners));
-// should return [
-//   { name: "Elisabeth", lovesJS: true },
-//   { name: "Pete", age: 23, lovesJS: false }
-// ]
 
     // 👉 CHALLENGE 4
     // 🧠 The function processLearnerMap takes an array of learner objects as its argument, and returns a new array.
@@ -114,30 +72,9 @@ console.log(processLearnerForEach(learners));
     // ❗ Notes:
     // 🧠 Solve this challenge using the map method of the learners array.
     // 🧠 Use arrow functions.
+    const processLearnerMap = () => {
 
-    const processLearnerMap = (learners) => {
-  return learners.map((learner) => {
-    if (learner.lovesJS === 0) {
-      return { ...learner, lovesJS: false };
-    } else if (learner.lovesJS === 1) {
-      return { ...learner, lovesJS: true };
     }
-    return learner;
-  });
-};
-
-// Example of usage:
-const learners = [
-  { name: "Elisabeth", lovesJS: 1 },
-  { name: "Pete", age: 23, lovesJS: 0 }
-];
-
-console.log(processLearnerMap(learners));
-// should return [
-//   { name: "Elisabeth", lovesJS: true },
-//   { name: "Pete", age: 23, lovesJS: false }
-// ]
-
 
     // 👉 CHALLENGE 5
     // 🧠 The function getJavaScriptLoversForEach takes an array of learner objects and returns an array or a string.
@@ -147,41 +84,9 @@ console.log(processLearnerMap(learners));
     // ❗ Notes:
     // 🧠 Solve this challenge using the forEach method of the learners array.
     // 🧠 You will need to declare a result array into which you push learners from inside your forEach loop.
+    const getJavaScriptLoversForEach = () => {
 
-    const getJavaScriptLoversForEach = (learners) => {
-  const jsLovers = [];
-
-  learners.forEach((learner) => {
-    const lovesJS = learner.lovesJS === 1 || learner.lovesJS === true;
-
-    if (lovesJS) {
-      jsLovers.push(learner);
     }
-  });
-
-  if (jsLovers.length > 0) {
-    return jsLovers;
-  } else {
-    return "no JS lovers here!";
-  }
-};
-
-// Example of usage:
-const learners = [
-  { name: "Elisabeth", lovesJS: 1 },
-  { name: "Pete", age: 23, lovesJS: 0 },
-  { name: "John", lovesJS: true },
-  { name: "Alice", lovesJS: false }
-];
-
-console.log(getJavaScriptLoversForEach(learners));
-// should return [
-//   { name: "Elisabeth", lovesJS: 1 },
-//   { name: "John", lovesJS: true }
-// ]
-
-console.log(getJavaScriptLoversForEach([{ name: "Bob", lovesJS: false }]));
-// should return "no JS lovers here!"
 
     // 👉 CHALLENGE 6
     // 🧠 The function getJavaScriptLoversFilter takes an array of learner objects and returns an array or a string.
