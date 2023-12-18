@@ -94,9 +94,29 @@ console.log(processLearnersLoop(learners));
     // ❗ Notes:
     // 🧠 Solve this challenge using the map method of the learners array.
     // 🧠 Use arrow functions.
-    const processLearnerMap = () => {
 
+    const processLearnerMap = (learners) => {
+  return learners.map((learner) => {
+    if (learner.lovesJS === 0) {
+      return { ...learner, lovesJS: false };
+    } else if (learner.lovesJS === 1) {
+      return { ...learner, lovesJS: true };
     }
+    return learner;
+  });
+};
+
+// Example of usage:
+const learners = [
+  { name: "Elisabeth", lovesJS: 1 },
+  { name: "Pete", age: 23, lovesJS: 0 }
+];
+
+console.log(processLearnerMap(learners));
+// should return [
+//   { name: "Elisabeth", lovesJS: true },
+//   { name: "Pete", age: 23, lovesJS: false }
+// ]
 
     // 👉 CHALLENGE 5
     // 🧠 The function getJavaScriptLoversForEach takes an array of learner objects and returns an array or a string.
