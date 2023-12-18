@@ -55,7 +55,7 @@ console.log(processSingleLearner({ name: "Pete", age: 23, lovesJS: 0 })); // sho
     
     const processLearnersLoop = (learners) => {
   for (let i = 0; i < learners.length; i++) {
-    const learner = learners[i];
+    const learner = learners[i]; 
     if (learner.lovesJS === 0) {
       learner.lovesJS = false;
     } else if (learner.lovesJS === 1) {
