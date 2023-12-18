@@ -36,10 +36,10 @@
   }
   return learner;
 };
-
+/*
 // Examples of usage:
 console.log(processSingleLearner({ name: "Elisabeth", lovesJS: 1 })); // should return { name: "Elisabeth", lovesJS: true }
-console.log(processSingleLearner({ name: "Pete", age: 23, lovesJS: 0 })); // should return { name: "Pete", age: 23, lovesJS: false }
+console.log(processSingleLearner({ name: "Pete", age: 23, lovesJS: 0 })); // should return { name: "Pete", age: 23, lovesJS: false } */
 
 
     // 👉 CHALLENGE 2
@@ -66,7 +66,7 @@ console.log(processSingleLearner({ name: "Pete", age: 23, lovesJS: 0 })); // sho
 };
 
 // Example of usage:
-const learners = [
+/*const learners = [
   { name: "Elisabeth", lovesJS: 1 },
   { name: "Pete", age: 23, lovesJS: 0 }
 ];
@@ -75,7 +75,7 @@ console.log(processLearnersLoop(learners));
 // should return [
 //   { name: "Elisabeth", lovesJS: true },
 //   { name: "Pete", age: 23, lovesJS: false }
-// ]
+// ]*/
 
 
     // 👉 CHALLENGE 3
@@ -104,7 +104,7 @@ console.log(processLearnersLoop(learners));
       return learner;
     });
   };
-  
+  /*
   // Example of usage:
   const learners = [
     { name: "Elisabeth", lovesJS: 1 },
@@ -115,7 +115,7 @@ console.log(processLearnersLoop(learners));
   // should return [
   //   { name: "Elisabeth", lovesJS: true },
   //   { name: "Pete", age: 23, lovesJS: false }
-  // ]
+  // ] */
       
 
     // 👉 CHALLENGE 5
@@ -136,8 +136,7 @@ console.log(processLearnersLoop(learners));
     // ❗ Notes:
     // 🧠 Solve this challenge using the filter method of the learners array.
     const getJavaScriptLoversFilter = () => {
-
-    }
+}
 
     // 👉 CHALLENGE 7
     // 🧠 The function sumOddInts takes an array of integers as its argument and returns an array with two elements.
@@ -165,7 +164,7 @@ console.log(processLearnersLoop(learners));
 
   return [sum, oddNumbers];
 };
-
+/*
 // Examples of usage:
 console.log(sumOddInts([0, 1, 2, 3, 4, 5]));
 // should return [9, [1, 3, 5]]
@@ -177,7 +176,7 @@ console.log(sumOddInts([2, 6]));
 // should return [0, []]
 
 console.log(sumOddInts([]));
-// should return [0, []]
+// should return [0, []] */
 
     // 👉 CHALLENGE 8
     // 🧠 The function checkInts takes any number of arguments, but each argument is an integer.
@@ -197,7 +196,7 @@ console.log(sumOddInts([]));
 
   return args.map((num) => (num % 2 === 0 ? "even" : "odd"));
 };
-
+/*
 // Examples of usage:
 console.log(checkInts(0, 1, 2, 3, 4, 5));
 // should return ["even", "odd","even", "odd","even", "odd"]
@@ -209,7 +208,7 @@ console.log(checkInts(2, 6));
 // should return ["even", "even"]
 
 console.log(checkInts());
-// should return "pass some arguments, yo!"
+// should return "pass some arguments, yo!" */
 
 
     // 🧪 TESTS, do not work below this line
